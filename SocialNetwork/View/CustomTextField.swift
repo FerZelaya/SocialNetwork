@@ -14,7 +14,7 @@ class CustomTextField: UITextField {
         super.awakeFromNib()
         
         layer.borderColor = UIColor(red: shadowGrey, green: shadowGrey, blue: shadowGrey, alpha: 0.2).cgColor
-        layer.borderWidth = 1.0
+        layer.borderWidth = 3.0
         layer.cornerRadius = 5.0
         
     }
