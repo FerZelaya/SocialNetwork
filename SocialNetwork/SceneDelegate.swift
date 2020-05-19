@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+      if let openURLContext = URLContexts.first {
+        ApplicationDelegate.shared.application(UIApplication.shared, open:
+        openURLContext.url, sourceApplication:
+        openURLContext.options.sourceApplication, annotation:
+        openURLContext.options.annotation)
+      }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

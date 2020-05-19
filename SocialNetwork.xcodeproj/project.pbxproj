@@ -38,6 +38,7 @@
 		D9E9B05C2471EE5600ABA478 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D9E9B05E2471EFEF00ABA478 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D9E9B0602471F63C00ABA478 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D9E9B0622472077300ABA478 /* SocialNetwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialNetwork.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +91,13 @@
 		D9E9B03D2470C4A800ABA478 /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				D9E9B0622472077300ABA478 /* SocialNetwork.entitlements */,
+				D9E9B03E2470C4A800ABA478 /* AppDelegate.swift */,
+				D9E9B0402470C4A800ABA478 /* SceneDelegate.swift */,
 				D9E9B05B2471EE4400ABA478 /* Utilities */,
 				D9E9B0562470D8F900ABA478 /* Model */,
 				D9E9B0552470D8F200ABA478 /* View */,
 				D9E9B0542470D8EE00ABA478 /* Controller */,
-				D9E9B03E2470C4A800ABA478 /* AppDelegate.swift */,
-				D9E9B0402470C4A800ABA478 /* SceneDelegate.swift */,
 				D9E9B0472470C4A900ABA478 /* Assets.xcassets */,
 				D9E9B0492470C4A900ABA478 /* LaunchScreen.storyboard */,
 				D9E9B0572470DB7100ABA478 /* GoogleService-Info.plist */,
@@ -406,6 +408,7 @@
 			baseConfigurationReference = 907F477E7DDC5682007A5E57 /* Pods-SocialNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialNetwork/SocialNetwork.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5NWWPPV97;
 				INFOPLIST_FILE = SocialNetwork/Info.plist;
@@ -425,6 +428,7 @@
 			baseConfigurationReference = B6D91748B03DAF55BA2A164B /* Pods-SocialNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialNetwork/SocialNetwork.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5NWWPPV97;
 				INFOPLIST_FILE = SocialNetwork/Info.plist;
