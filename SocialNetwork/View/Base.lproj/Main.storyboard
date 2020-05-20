@@ -145,14 +145,34 @@
                     <view key="view" contentMode="scaleToFill" id="xz7-XX-A6P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SE-Uc-gtk" customClass="CustomButton" customModule="SocialNetwork" customModuleProvider="target">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="2x4-ln-NdK"/>
+                                    <constraint firstAttribute="height" constant="300" id="aaw-Jx-WIa"/>
+                                </constraints>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="KbD-oZ-N5z" eventType="touchUpInside" id="3Qy-My-sOF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.57687997820000003" blue="0.62794154879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4SE-Uc-gtk" firstAttribute="centerY" secondItem="xz7-XX-A6P" secondAttribute="centerY" id="RrU-MP-MFT"/>
+                            <constraint firstItem="4SE-Uc-gtk" firstAttribute="centerX" secondItem="xz7-XX-A6P" secondAttribute="centerX" id="eM3-AL-bPT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xsf-z4-DBP"/>
                     </view>
                     <navigationItem key="navigationItem" id="77r-Nf-1IQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dks-G1-U4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="76"/>
+            <point key="canvasLocation" x="1273.913043478261" y="75.669642857142847"/>
         </scene>
     </scenes>
     <resources>

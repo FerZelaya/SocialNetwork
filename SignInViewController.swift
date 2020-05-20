@@ -19,13 +19,18 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
         
-        if let _ = KeychainWrapper.standard.string(forKey: "myKey") {
+        if let _ = KeychainWrapper.standard.string(forKey: keyUID) {
+            print("ID found")
             performSegue(withIdentifier: segueGoToFeed, sender: nil)
         }
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+   
         self.hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -44,7 +49,7 @@ class SignInViewController: UIViewController {
             } else if results?.isCancelled == true  {
                 print("User cancelled Facebook authentication")
             } else {
-                print("Success")
+                print("Success with facebook")
                 let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
                 self.firebaseAuth(credential)
             }
