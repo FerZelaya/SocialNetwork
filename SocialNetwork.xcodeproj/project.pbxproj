@@ -19,6 +19,7 @@
 		D9E9B05D2471EE5600ABA478 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9B05C2471EE5600ABA478 /* Constants.swift */; };
 		D9E9B05F2471EFEF00ABA478 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9B05E2471EFEF00ABA478 /* CustomButton.swift */; };
 		D9E9B0612471F63C00ABA478 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9B0602471F63C00ABA478 /* CustomTextField.swift */; };
+		D9E9B064247487B400ABA478 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9B063247487B400ABA478 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D9E9B05E2471EFEF00ABA478 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		D9E9B0602471F63C00ABA478 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D9E9B0622472077300ABA478 /* SocialNetwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialNetwork.entitlements; sourceTree = "<group>"; };
+		D9E9B063247487B400ABA478 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D9E9B0422470C4A800ABA478 /* SignInViewController.swift */,
+				D9E9B063247487B400ABA478 /* FeedViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -263,6 +266,7 @@
 				D9E9B05F2471EFEF00ABA478 /* CustomButton.swift in Sources */,
 				D9E9B05A2471EDD600ABA478 /* CustomView.swift in Sources */,
 				D9E9B03F2470C4A800ABA478 /* AppDelegate.swift in Sources */,
+				D9E9B064247487B400ABA478 /* FeedViewController.swift in Sources */,
 				D9E9B0412470C4A800ABA478 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

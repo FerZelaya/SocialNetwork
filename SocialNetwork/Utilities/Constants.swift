@@ -10,3 +10,7 @@ import UIKit
 
 
 let shadowGrey: CGFloat = 120.0 / 255.0
+
+let keyUID = "uid"
+
+let segueGoToFeed = "goToFeed"

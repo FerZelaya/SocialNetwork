@@ -10,10 +10,11 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
+import SwiftKeychainWrapper
 
 
 class SignInViewController: UIViewController {
-
+    
     @IBOutlet weak var FBButton: CustomButton!
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
@@ -21,12 +22,18 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let _ = KeychainWrapper.standard.string(forKey: "myKey") {
+            performSegue(withIdentifier: segueGoToFeed, sender: nil)
+        }
+        
         self.hideKeyboardWhenTappedAround()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
-
+    
+    
+    //MARK: - Facebook Login
+    
     @IBAction func FBButtonPressed(_ sender: CustomButton) {
         
         let fbLogin = LoginManager()
@@ -42,10 +49,11 @@ class SignInViewController: UIViewController {
                 self.firebaseAuth(credential)
             }
         }
-  
+        
     }
     
     
+    //MARK: - Firebase email login
     
     @IBAction func signInPressed(_ sender: Any) {
         
@@ -53,12 +61,19 @@ class SignInViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if error == nil {
                     print("Email authenticated with firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.user.uid)
+                    }
                 } else {
                     Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                         if error != nil {
                             print("Unable to authenticate this email with firebase")
                         } else {
                             print("Succesfully authenticated your email with firebase")
+                            if let user = user {
+                                self.completeSignIn(id: user.user.uid)
+                            }
+                            
                         }
                     }
                 }
@@ -69,18 +84,33 @@ class SignInViewController: UIViewController {
     }
     
     
-
-    //MARK: - Firebase
+    
+    //MARK: - Firebase AUTH
     
     func firebaseAuth(_ credential: AuthCredential) {
-        Auth.auth().signIn(with: credential) { (resutls, error) in
+        Auth.auth().signIn(with: credential) { (user, error) in
             if error != nil {
                 print("Unable to authenticate with firebase, \(String(describing: error))")
             } else {
                 print("Success with firebase")
+                if let user = user {
+                    self.completeSignIn(id: user.user.uid)
+                    
+                }
+                
             }
         }
     }
+    
+    
+    //MARK: - Keychain
+    
+    func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: keyUID)
+        print("Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: segueGoToFeed, sender: nil)
+    }
+    
     
 }
 
@@ -97,7 +127,7 @@ extension UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -110,7 +140,7 @@ extension UIViewController {
             }
         }
     }
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0

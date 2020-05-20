@@ -131,11 +131,28 @@
                         <outlet property="FBButton" destination="kfS-3m-FkG" id="2fe-XD-gIS"/>
                         <outlet property="emailTextField" destination="h4q-Vr-Hqv" id="K6W-b4-C2C"/>
                         <outlet property="passwordTextField" destination="2Qx-z9-XC5" id="Xpx-Pk-1GR"/>
+                        <segue destination="KbD-oZ-N5z" kind="presentation" identifier="goToFeed" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="moX-DR-k7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="76.339285714285708"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="OWI-su-w93">
+            <objects>
+                <viewController id="KbD-oZ-N5z" customClass="FeedViewController" customModule="SocialNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xz7-XX-A6P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.57687997820000003" blue="0.62794154879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="xsf-z4-DBP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="77r-Nf-1IQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dks-G1-U4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="76"/>
         </scene>
     </scenes>
     <resources>
