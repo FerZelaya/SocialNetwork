@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7C72DEEB9E1DF80FF6AEF6B6 /* Pods_SocialNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324ECD3CF9061138815F41A7 /* Pods_SocialNetwork.framework */; };
+		D95252AB2475D8C800CADECE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95252AA2475D8C800CADECE /* CustomImageView.swift */; };
+		D95252AD2475D9D700CADECE /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95252AC2475D9D700CADECE /* RoundButton.swift */; };
+		D95252AF2479D7DC00CADECE /* PostCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95252AE2479D7DC00CADECE /* PostCellTableViewCell.swift */; };
 		D9E9B03F2470C4A800ABA478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9B03E2470C4A800ABA478 /* AppDelegate.swift */; };
 		D9E9B0412470C4A800ABA478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9B0402470C4A800ABA478 /* SceneDelegate.swift */; };
 		D9E9B0432470C4A800ABA478 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9B0422470C4A800ABA478 /* SignInViewController.swift */; };
@@ -26,6 +29,9 @@
 		324ECD3CF9061138815F41A7 /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		907F477E7DDC5682007A5E57 /* Pods-SocialNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.debug.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		B6D91748B03DAF55BA2A164B /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		D95252AA2475D8C800CADECE /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		D95252AC2475D9D700CADECE /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		D95252AE2479D7DC00CADECE /* PostCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellTableViewCell.swift; sourceTree = "<group>"; };
 		D9E9B03B2470C4A800ABA478 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E9B03E2470C4A800ABA478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9E9B0402470C4A800ABA478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 				D9E9B0592471EDD600ABA478 /* CustomView.swift */,
 				D9E9B05E2471EFEF00ABA478 /* CustomButton.swift */,
 				D9E9B0602471F63C00ABA478 /* CustomTextField.swift */,
+				D95252AA2475D8C800CADECE /* CustomImageView.swift */,
+				D95252AC2475D9D700CADECE /* RoundButton.swift */,
+				D95252AE2479D7DC00CADECE /* PostCellTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,10 +270,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9E9B0612471F63C00ABA478 /* CustomTextField.swift in Sources */,
+				D95252AB2475D8C800CADECE /* CustomImageView.swift in Sources */,
 				D9E9B05D2471EE5600ABA478 /* Constants.swift in Sources */,
 				D9E9B0432470C4A800ABA478 /* SignInViewController.swift in Sources */,
 				D9E9B05F2471EFEF00ABA478 /* CustomButton.swift in Sources */,
 				D9E9B05A2471EDD600ABA478 /* CustomView.swift in Sources */,
+				D95252AD2475D9D700CADECE /* RoundButton.swift in Sources */,
+				D95252AF2479D7DC00CADECE /* PostCellTableViewCell.swift in Sources */,
 				D9E9B03F2470C4A800ABA478 /* AppDelegate.swift in Sources */,
 				D9E9B064247487B400ABA478 /* FeedViewController.swift in Sources */,
 				D9E9B0412470C4A800ABA478 /* SceneDelegate.swift in Sources */,
